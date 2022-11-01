@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import account from "./account.json";
+import Logo from "./components/Logo";
+import User from "./components/User";
+import Releve from "./components/Releve";
+
+const username = "Thiru";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <div className="head wrapper">
+          <Logo />
+          <User username={username} />
+        </div>
       </header>
-    </div>
+      <main>
+        {account.map((e) => {
+          return <Releve account={e} />;
+        })}
+      </main>
+    </>
   );
 }
 
