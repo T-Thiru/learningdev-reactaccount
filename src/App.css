@@ -16,6 +16,7 @@ body {
 
 header {
   background-color: rgb(36, 36, 36);
+  z-index: 100;
 }
 
 .head {
@@ -25,6 +26,10 @@ header {
 }
 .logo {
   width: 150px;
+  transition: 0.2s ease;
+}
+.logo:hover {
+  opacity: 0.5;
 }
 .container-user {
   display: flex;
@@ -34,6 +39,10 @@ header {
 .icon {
   background-color: white;
   border-radius: 50%;
+  transition: 0.3s ease;
+}
+.icon:hover {
+  background-color: chartreuse;
 }
 
 .username {
@@ -41,6 +50,10 @@ header {
   margin: 0 20px;
   font-size: 20px;
   font-weight: 600;
+}
+
+.container-account {
+  margin-bottom: 70px;
 }
 
 .releve-header {
@@ -52,6 +65,13 @@ header {
   align-items: center;
   border-radius: 10px;
   padding: 20px 20px;
+  z-index: 50;
+  box-shadow: 1px 6px 18px 0px rgba(0, 0, 0, 0.39);
+  transition: 0.3s ease;
+}
+
+.releve-header:hover {
+  text-decoration: underline;
 }
 
 .color1976D2 {
@@ -73,6 +93,13 @@ header {
   justify-content: space-between;
   padding: 5px 10px;
 }
+.container-operation {
+  transition: 0.2s ease;
+}
+.container-operation:hover {
+  text-decoration: underline;
+  scale: 1.1;
+}
 .detail {
   flex: 2;
   padding-left: 20px;
@@ -86,9 +113,17 @@ header {
 }
 
 .btn {
+  cursor: pointer;
   margin: 10px 0;
   padding: 10px;
-  display: flex;
   position: absolute;
   right: 0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  color: rgb(111, 110, 110);
+  transition: 0.3s ease;
+}
+.btn:hover {
+  scale: 1.3;
 }

@@ -3,7 +3,7 @@ import Operation from "./Operation";
 
 const Releve = (props) => {
   return (
-    <div className="wrapper">
+    <div className="container-account wrapper">
       <div
         className={`releve-header color${props.account.color.replace("#", "")}`}
       >
